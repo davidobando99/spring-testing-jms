@@ -22,9 +22,5 @@ public class BookingController {
         return new ResponseEntity<>(booking, HttpStatus.CREATED);
     }
 
-    @PostMapping("/test")
-    public ResponseEntity<Booking> testBooking(@RequestBody Booking newBooking){
-        return new ResponseEntity<>(newBooking, HttpStatus.CREATED);
-    }
 
 }
