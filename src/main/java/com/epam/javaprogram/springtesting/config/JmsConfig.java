@@ -22,16 +22,7 @@ import software.amazon.awssdk.services.sqs.SqsClient;
 @EnableJms
 @Configuration
 public class JmsConfig {
-/**
-    @Value("${spring.activemq.broker-url}")
-    private String brokerUrl;
 
-    @Value("${spring.activemq.user}")
-    private String user;
-
-    @Value("${spring.activemq.password}")
-    private String password;
-*/
     @Bean
     public MessageConverter jacksonJmsMessageConverter(){
         MappingJackson2MessageConverter converter = new MappingJackson2MessageConverter();

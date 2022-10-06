@@ -2,7 +2,9 @@ package com.epam.javaprogram.springtesting.domain;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Builder;
 
+@Builder
 public class Booking {
 
     private String id;
@@ -39,4 +41,6 @@ public class Booking {
     public double getPrice() {
         return price;
     }
+
+
 }

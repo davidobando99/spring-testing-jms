@@ -10,11 +10,9 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class BookingController {
 
-    private final BookingConsumer bookingConsumer;
     private final BookingService bookingService;
 
-    public BookingController(BookingConsumer bookingConsumer, BookingService bookingService) {
-        this.bookingConsumer = bookingConsumer;
+    public BookingController(BookingService bookingService) {
         this.bookingService = bookingService;
     }
 
@@ -22,6 +20,11 @@ public class BookingController {
     public ResponseEntity<Booking> createBooking(@RequestBody Booking newBooking){
         Booking booking = bookingService.sendBookingMessage(newBooking,"CREATED");
         return new ResponseEntity<>(booking, HttpStatus.CREATED);
+    }
+
+    @PostMapping("/test")
+    public ResponseEntity<Booking> testBooking(@RequestBody Booking newBooking){
+        return new ResponseEntity<>(newBooking, HttpStatus.CREATED);
     }
 
 }

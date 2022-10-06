@@ -1,0 +1,13 @@
+server:
+  port: 8081
+cloud:
+  aws:
+    region:
+      static: eu-central-1
+    stack:
+      auto: false
+      enabled: false
+
+event-processing:
+  booking-queue: booking-queue
+  booking-bucket: booking-bucket

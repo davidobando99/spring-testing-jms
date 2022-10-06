@@ -21,7 +21,17 @@ dependencies {
     implementation 'com.amazonaws:aws-java-sdk:1.12.307'
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-aws', version: '2.2.6.RELEASE', ext: 'pom'
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-aws-messaging', version: '2.2.6.RELEASE'
+
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation group: 'org.testcontainers', name: 'junit-jupiter', version: '1.17.4'
+    testImplementation group: 'org.testcontainers', name: 'localstack', version: '1.17.4'
+    testImplementation group: 'org.awaitility', name: 'awaitility', version: '4.2.0'
+
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+
 }
 
 test {
