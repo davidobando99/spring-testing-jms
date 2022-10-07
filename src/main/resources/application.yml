@@ -1,13 +1,12 @@
 server:
   port: 8081
-cloud:
-  aws:
-    region:
-      static: eu-central-1
-    stack:
-      auto: false
-      enabled: false
-
-event-processing:
-  booking-queue: booking-queue
-  booking-bucket: booking-bucket
+spring:
+    profiles:
+      active: "test"
+    activemq:
+      broker-url: ssl://b-8c0d3f9e-5d8a-4962-a82d-2e46e87a9a63-1.mq.us-east-1.amazonaws.com:61617
+      user: broker-admin
+      password: broker-password
+      pool:
+        enabled: true
+        max-connections: 50

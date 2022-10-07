@@ -18,11 +18,11 @@ dependencies {
     implementation group: 'org.springframework', name: 'spring-jms'
     implementation group: 'com.amazonaws', name: 'aws-java-sdk'
     implementation group: 'com.amazonaws', name: 'amazon-sqs-java-messaging-lib', version: '2.0.0'
-    implementation 'com.amazonaws:aws-java-sdk:1.12.307'
+    implementation 'com.amazonaws:aws-java-sdk:1.12.315'
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation group: 'org.springframework.cloud', name: 'spring-cloud-aws', version: '2.2.6.RELEASE', ext: 'pom'
-    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-aws-messaging', version: '2.2.6.RELEASE'
+    implementation group: 'org.apache.activemq', name: 'activemq-core', version: '5.7.0'
+
 
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

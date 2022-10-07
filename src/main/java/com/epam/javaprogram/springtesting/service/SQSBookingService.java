@@ -21,6 +21,7 @@ public class SQSBookingService implements BookingService{
             message.setStringProperty("status", status);
             return message;
         });
+
         return booking;
 
     }

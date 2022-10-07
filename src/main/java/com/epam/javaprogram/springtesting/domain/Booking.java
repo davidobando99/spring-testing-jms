@@ -42,5 +42,14 @@ public class Booking {
         return price;
     }
 
-
+    @Override
+    public String toString() {
+        return "Booking{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", country='" + country + '\'' +
+                ", city='" + city + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }
